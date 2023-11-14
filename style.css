@@ -5,7 +5,14 @@ html, body{
 }
 
 main{
+    padding: 20px;
     width: 900px;
+    margin: auto;
+    text-align: center;
+}
+form{
+    padding-top: 50px;
+    width: 50%;
     margin: auto;
     text-align: center;
 }

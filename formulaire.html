@@ -11,6 +11,78 @@
 <body>
     <main>
         <h1> Formulaire d'inscription</h1>
+        <form>
+            <div class="form-group row">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" placeholder="Elouasbi">
+            </div>
+            <div class="form-group row">
+                <label for="prenom">Prenom</label>
+                <input type="text" class="form-control" placeholder="Samir">
+            </div>
+            <div class="form-group row">
+              <label for="exampleInputEmail1">Adresse courriel</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group row">
+                <label for="phone">phone number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+            </div>
+        
+            <div class="form-group row">
+                <label for="radios"> radio buttons</label>
+                <div class="col-auto">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                          radio 1
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            radio 2
+                        </label>
+                      </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="cases"> cases a cocher</label>
+                <div class="col-auto"></div>
+                    <div class="form-check mb-2 pr-3">
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                        <label class="form-check-label" for="autoSizingCheck">
+                            1
+                        </label>
+                    </div>
+                    <div class="form-check mb-2 pr-3">
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                        <label class="form-check-label" for="autoSizingCheck">
+                        2
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                        <label class="form-check-label" for="autoSizingCheck">
+                            3
+                        </label>
+                    </div>
+                </div>
+            </div>
+        
+           
+            <div class="form-group row">
+                <label for="exampleFormControlSelect1">option select</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+          </form>
     </main>
     <script src="validation.js"></script>
 </body>
