@@ -16,3 +16,10 @@ form{
     margin: auto;
     text-align: center;
 }
+.error{
+    font-size: small;
+    color: red;
+}
+.form-group div span{
+    color: seagreen;
+}

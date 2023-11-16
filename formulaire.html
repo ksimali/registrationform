@@ -11,26 +11,30 @@
 <body>
     <main>
         <h1> Formulaire d'inscription</h1>
-        <form>
+        <form id="form" action="" method="">
             <div class="form-group row">
-                <label for="nom">Nom</label>
-                <input type="text" class="form-control" placeholder="Dior">
+                <label for="lastname">Nom</label>
+                <input type="text" class="form-control" id="lastname" name="lastname"placeholder="Dior" onkeyup="validateLastName()">
+                <div class="error" id="lastname-error"></div>
             </div>
             <div class="form-group row">
-                <label for="prenom">Prenom</label>
-                <input type="text" class="form-control" placeholder="Christian">
+                <label for="firstname">Prenom</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Christian" onkeyup="validateFirstName()">
+                <div class="error" id="firstname-error"></div>
             </div>
             <div class="form-group row">
-              <label for="exampleInputEmail1">Adresse courriel</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="christiandior@dior.ca">
+              <label for="email">Adresse courriel</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="christiandior@dior.ca">
+              <div class="error" id="email-error"></div>
             </div>
             <div class="form-group row">
                 <label for="phone">phone number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder="(514) 234-5678"pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="(514) 234-5678" >
+                <div class="error" id="phone-error"></div>
             </div>
         
             <div class="form-group row">
-                <label for="radios"> radio buttons</label>
+                <div id="radios">radio buttons</div>
                 <div class="col-auto">
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
@@ -47,7 +51,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="cases"> cases a cocher</label>
+                <div id="checkboxes">cases a cocher</div>
                 <div class="col-auto"></div>
                     <div class="form-check mb-2 pr-3">
                         <input class="form-check-input" type="checkbox" id="autoSizingCheck1">
@@ -82,6 +86,7 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-primary mt-3">S'inscrire</button>
+            <div class="error" id="submit-error"></div>
           </form>
     </main>
     <script src="validation.js"></script>
