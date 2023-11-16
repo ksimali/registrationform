@@ -37,6 +37,20 @@ function validateFirstName(){
     return true;
 }
 
+function validateEmail(){
+    let email = document.getElementById('email').value;
+
+    if(email.length == 0){
+        emailError.innerHTML = 'email obligatoire';
+        return false;
+    }
+    if(!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
+        emailError.innerHTML = 'format du courriel non autorisé ! ';
+        return false;
+    }
+    emailError.innerHTML = '<span>valid</span>';
+    return true;
+}
 function validatePhone(){
     let phone = document.getElementById('phone').value;
     // si valeur dans input phone est vide
