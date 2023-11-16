@@ -5,7 +5,7 @@ let emailError = document.getElementById('email-error');
 let phoneError = document.getElementById('phone-error');
 let submitError = document.getElementById('submit-error');
 
-// Functions validate
+// Functions de validation des inputs du formulaire
 
 function validateLastName(){
     let lastname = document.getElementById('lastname').value;
