@@ -16,15 +16,25 @@ form{
     padding: 20px;
     width: 400px;
     margin: auto;
-    text-align: center;
+    text-align: center
 }
 form h1{
     padding-bottom: 30px;
     margin: auto;
 }
-.error{
+.form-group input:focus{
+    outline: 0;
+}
+.form-group.success input{
+    border-color: #09c372;
+}
+.form-group.error input{
+    border-color: #ff3860;
+}
+.form-group .error{
     font-size: small;
-    color: red;
+    color: #ff3860;
+    height: 13px;
 }
 .success{
     color: seagreen;
