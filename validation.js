@@ -58,5 +58,12 @@ const validateInputs = () => {
     }else{
         setSuccess(firstname);
     }
-    
+    // validation du telephone
+    if(phoneValue ===''){
+        setError(phone, 'Numéro de téléphone obligatoire');
+    }else if(!phoneValue.match(/^\([0-9]{3}\)[\s][0-9]{3}-[0-9]{4}$/)){
+        setError(phone, 'N° non valide, format a respecter: (XXX) XXX-XXXX');
+    }else{
+        setSuccess(firstname);
+    }
 };
