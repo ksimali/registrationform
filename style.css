@@ -6,12 +6,7 @@ html, body{
 body{
     font-family: 'Roboto', 'sans-serif';
 }
-main{
-    padding: 20px;
-    width: 900px;
-    margin: auto;
-    text-align: center;
-}
+
 form{
     padding: 20px;
     width: 400px;
@@ -37,5 +32,7 @@ form h1{
     height: 13px;
 }
 .success{
+    font-size: small;
     color: seagreen;
+    height: 13px;
 }
