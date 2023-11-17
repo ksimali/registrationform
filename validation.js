@@ -58,12 +58,20 @@ const validateInputs = () => {
     }else{
         setSuccess(firstname);
     }
+    // validation du courriel
+    if(emailValue === ''){
+        setError(email, 'Courriel obligatoire');
+    }else if(!emailValue.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
+        setError(email, 'format du courriel non autorisé ! ');
+    }else{
+        setSuccess(email);
+    }
     // validation du telephone
     if(phoneValue ===''){
         setError(phone, 'Numéro de téléphone obligatoire');
     }else if(!phoneValue.match(/^\([0-9]{3}\)[\s][0-9]{3}-[0-9]{4}$/)){
         setError(phone, 'N° non valide, format a respecter: (XXX) XXX-XXXX');
     }else{
-        setSuccess(firstname);
+        setSuccess(phone);
     }
 };
