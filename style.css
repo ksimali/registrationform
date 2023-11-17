@@ -29,10 +29,7 @@ form h1{
 .form-group .error{
     font-size: small;
     color: #ff3860;
-    height: 13px;
 }
 .success{
-    font-size: small;
     color: seagreen;
-    height: 13px;
 }
