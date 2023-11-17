@@ -44,19 +44,19 @@ const validateInputs = () => {
 // conditions de validation pour chaque value
     // validation du nom
     if(lastnameValue === ''){
-        setError(lastname, 'Nom obligatoire')
+        setError(lastname, 'Nom obligatoire');
     }else if(!lastnameValue.match(/^[A-Za-z]{2,20}$/)){
-        setError(lastname, 'le nom doit être composé uniquement de lettres(entre 2 et 20 lettres max)')
+        setError(lastname, 'le nom doit être composé uniquement de lettres(entre 2 et 20 lettres max)');
     }else{
         setSuccess(lastname);
     }
     // validation du prénom
     if(firstnameValue === ''){
-        setError(firstname, 'Prénom obligatoire')
+        setError(firstname, 'Prénom obligatoire');
     }else if(!firstnameValue.match(/^[A-Za-z]{2,20}$/)){
         setError(firstname, 'le prénom doit être composé uniquement de lettres(entre 2 et 20 lettres max)');
     }else{
         setSuccess(firstname);
     }
-
+    
 };
