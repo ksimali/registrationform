@@ -33,11 +33,7 @@ const setSuccess = element =>{
     inputControl.classList.remove('error');
 
 }
-// fonction de contrôle de validité des inputs
-const isValidLastname = lastname => {
-    const lastnameRegExp = /^[A-Za-z]{2,20}$/;
-    return lastnameRegExp.test();
-}
+
 // Implémentation de la fonction validateInputs
 const validateInputs = () => {
     const lastnameValue = lastname.value.trim();
