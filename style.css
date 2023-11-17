@@ -17,9 +17,7 @@ form h1{
     padding-bottom: 30px;
     margin: auto;
 }
-.form-group input:focus{
-    outline: 0;
-}
+
 .form-group.success input{
     border-color: #09c372;
 }
