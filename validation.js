@@ -30,7 +30,6 @@ const setSuccess = element =>{
 
     errorDisplay.innerText = '';
     inputControl.classList.add('success');
-    inputControl.style.color= "seagreen";
     inputControl.classList.remove('error');
 
 }
