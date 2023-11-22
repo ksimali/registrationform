@@ -10,15 +10,15 @@
 </head>
 <body>
     <main>
-        <h1> Formulaire d'inscription</h1>
-        <form id="registrationForm" action="" method="">
+        <form id="registrationForm" action="" method="" novalidate>
+            <h1> Formulaire d'inscription</h1>
             <div class="form-group row">
                 <label for="lastname">Nom</label>
                 <input type="text" class="form-control" id="lastname" name="lastname"placeholder="Dior">
                 <div class="error" id="lastname-error"></div>
             </div>
             <div class="form-group row">
-                <label for="firstname">Prenom</label>
+                <label for="firstname">Prénom</label>
                 <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Christian">
                 <div class="error" id="firstname-error"></div>
             </div>
@@ -28,61 +28,59 @@
               <div class="error" id="email-error"></div>
             </div>
             <div class="form-group row">
-                <label for="phone">phone number</label>
+                <label for="phone">Numéro de téléphone</label>
                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="(514) 234-5678">
                 <div class="error" id="phone-error"></div>
             </div>
         
             <div class="form-group row">
-                <div id="radios">radio buttons</div>
+                <div id="radios">Job</div>
                 <div class="col-auto">
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                         <label class="form-check-label" for="gridRadios1">
-                          radio 1
+                          Front-End
                         </label>
                     </div>
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked>
                         <label class="form-check-label" for="gridRadios2">
-                            radio 2
+                            Back-End
                         </label>
                       </div>
                 </div>
             </div>
             <div class="form-group row">
-                <div id="checkboxes">cases a cocher</div>
+                <div id="checkboxes">Languages</div>
                 <div class="col-auto"></div>
                     <div class="form-check mb-2 pr-3">
                         <input class="form-check-input" type="checkbox" id="autoSizingCheck1">
                         <label class="form-check-label" for="autoSizingCheck1">
-                            1
+                            js
                         </label>
                     </div>
                     <div class="form-check mb-2 pr-3">
                         <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
                         <label class="form-check-label" for="autoSizingCheck2">
-                        2
+                        cs
                         </label>
                     </div>
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="checkbox" id="autoSizingCheck3">
                         <label class="form-check-label" for="autoSizingCheck3">
-                            3
+                            py
                         </label>
                     </div>
                 </div>
             </div>
-        
-           
             <div class="form-group row">
-                <label for="exampleFormControlSelect1">option select</label>
+                <label for="exampleFormControlSelect1">Framework</label>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option>ReactJs</option>
+                  <option>ExpressJs</option>
+                  <option>Django</option>
+                  <option>Laravel</option>
+                  <option>.NET Core</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary mt-3">S'inscrire</button>

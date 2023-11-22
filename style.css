@@ -3,23 +3,31 @@ html, body{
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: 'Roboto', 'sans-serif';
+}
 
-main{
-    padding: 20px;
-    width: 900px;
-    margin: auto;
-    text-align: center;
-}
 form{
-    padding-top: 50px;
-    width: 50%;
+    padding: 20px;
+    width: 400px;
     margin: auto;
-    text-align: center;
+    text-align: center
 }
-.error{
+form h1{
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.form-group.success input{
+    border-color: #09c372;
+}
+.form-group.error input{
+    border-color: #ff3860;
+}
+.form-group .error{
     font-size: small;
-    color: red;
+    color: #ff3860;
 }
-.form-group div span{
+.sucess{
     color: seagreen;
 }
