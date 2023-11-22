@@ -13,10 +13,6 @@ form{
     margin: auto;
     text-align: center
 }
-form h1{
-    padding-bottom: 30px;
-    margin: auto;
-}
 
 .form-group.success input{
     border-color: #09c372;
@@ -27,7 +23,4 @@ form h1{
 .form-group .error{
     font-size: small;
     color: #ff3860;
-}
-.sucess{
-    color: seagreen;
 }
