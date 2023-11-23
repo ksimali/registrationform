@@ -12,7 +12,4 @@ form{
 .form-group.error input{
     border-color: #ff3860;
 }
-.form-group .error{
-    font-size: small;
-    color: #ff3860;
-}
+

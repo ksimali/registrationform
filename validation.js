@@ -20,6 +20,8 @@ const setError = (element, message) =>{
     const errorDisplay = inputControl.querySelector('.error') //
 
     errorDisplay.innerText = message;
+    errorDisplay.style.fontSize = "small";
+    errorDisplay.style.color = "red";
     inputControl.classList.add('error');
     inputControl.classList.remove('success'); // remove success class if error.
 }
