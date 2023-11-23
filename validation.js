@@ -20,9 +20,9 @@ const setError = (element, message) =>{
     const errorDisplay = inputControl.querySelector('.error') //
 
     errorDisplay.innerText = message;
-    errorDisplay.style.fontSize = "small";
-    errorDisplay.style.color = "red";
-    inputControl.classList.add('error');
+    errorDisplay.style.fontSize = "small"; // Add small font-size when error validation
+    errorDisplay.style.color = "red";   // Add red color to the error text validation
+    inputControl.classList.add('error'); // Add error class if don't exist.
     inputControl.classList.remove('success'); // remove success class if error.
 }
 
