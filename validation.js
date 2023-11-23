@@ -17,21 +17,24 @@ const phone = document.getElementById('phone');
 // fonction qui recoit un element html un message d'erreur en paramètre
 const setError = (element, message) =>{
     const inputControl = element.parentElement; // recupere le parent de l'element en paramètre
-    const errorDisplay = inputControl.querySelector('.error') //
+    const errorDisplay = inputControl.querySelector('.error') // selectionner les balises de classe error
+    const myInput = inputControl.querySelector('input'); // selectionner les balises input
 
     errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success'); // remove success class if error.
+    errorDisplay.style.fontSize = "small"; // Add small font-size when error validation
+    errorDisplay.style.color = "#ff3860";   // Add red color to the error text validation
+    myInput.style.borderColor= '#ff3860';
 }
 
-const setSuccess = element =>{
+const setSuccess = (element, message) =>{
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
+    const myInput = inputControl.querySelector('input');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-
+    errorDisplay.innerText = message;
+    errorDisplay.style.fontSize = "small";
+    errorDisplay.style.color = "#09c372";   // Add green color to the .error class
+    myInput.style.borderColor= '#09c372';
 }
 
 // Implémentation de la fonction validateInputs
@@ -48,7 +51,7 @@ const validateInputs = () => {
     }else if(!lastnameValue.match(/^[A-Za-z]{2,20}$/)){
         setError(lastname, 'le nom doit être composé uniquement de lettres(entre 2 et 20 lettres max)');
     }else{
-        setSuccess(lastname);
+        setSuccess(lastname, 'C\'est parfait!');
     }
     // validation du prénom
     if(firstnameValue === ''){
@@ -56,7 +59,7 @@ const validateInputs = () => {
     }else if(!firstnameValue.match(/^[A-Za-z]{2,20}$/)){
         setError(firstname, 'le prénom doit être composé uniquement de lettres(entre 2 et 20 lettres max)');
     }else{
-        setSuccess(firstname);
+        setSuccess(firstname, 'C\'est parfait!');
     }
     // validation du courriel
     if(emailValue === ''){
@@ -64,7 +67,7 @@ const validateInputs = () => {
     }else if(!emailValue.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
         setError(email, 'format du courriel non autorisé ! ');
     }else{
-        setSuccess(email);
+        setSuccess(email, 'C\'est parfait!');
     }
     // validation du telephone
     if(phoneValue ===''){
@@ -72,6 +75,6 @@ const validateInputs = () => {
     }else if(!phoneValue.match(/^\([0-9]{3}\)[\s][0-9]{3}-[0-9]{4}$/)){
         setError(phone, 'N° non valide, format a respecter: (XXX) XXX-XXXX');
     }else{
-        setSuccess(phone);
+        setSuccess(phone, 'C\'est parfait!');
     }
 };
