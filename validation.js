@@ -17,20 +17,24 @@ const phone = document.getElementById('phone');
 // fonction qui recoit un element html un message d'erreur en paramètre
 const setError = (element, message) =>{
     const inputControl = element.parentElement; // recupere le parent de l'element en paramètre
-    const errorDisplay = inputControl.querySelector('.error') //
+    const errorDisplay = inputControl.querySelector('.error') // selectionner les balises de classe error
+    const myInput = inputControl.querySelector('input'); // selectionner les balises input
 
     errorDisplay.innerText = message;
     errorDisplay.style.fontSize = "small"; // Add small font-size when error validation
     errorDisplay.style.color = "#ff3860";   // Add red color to the error text validation
+    myInput.style.borderColor= '#ff3860';
 }
 
 const setSuccess = (element, message) =>{
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
+    const myInput = inputControl.querySelector('input');
 
     errorDisplay.innerText = message;
     errorDisplay.style.fontSize = "small";
     errorDisplay.style.color = "#09c372";   // Add green color to the .error class
+    myInput.style.borderColor= '#09c372';
 }
 
 // Implémentation de la fonction validateInputs
