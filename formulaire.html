@@ -35,7 +35,7 @@
             </div>
             <!-- Partie boutons radios - sans validation -->
             <div class="form-group row">
-                <div id="radios">Job</div>
+                <div class="mr-3"id="radios">Job</div>
                 <div class="col-auto">
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
@@ -53,26 +53,24 @@
             </div>
             <!-- Partie cases à cocher - sans validation -->
             <div class="form-group row">
-                <div id="checkboxes">Languages</div>
-                <div class="col-auto"></div>
-                    <div class="form-check mb-2 pr-3">
-                        <input class="form-check-input" type="checkbox" id="autoSizingCheck1">
-                        <label class="form-check-label" for="autoSizingCheck1">
-                            js
-                        </label>
-                    </div>
-                    <div class="form-check mb-2 pr-3">
-                        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-                        <label class="form-check-label" for="autoSizingCheck2">
-                        cs
-                        </label>
-                    </div>
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" id="autoSizingCheck3">
-                        <label class="form-check-label" for="autoSizingCheck3">
-                            py
-                        </label>
-                    </div>
+                <div class="mr-4" id="checkboxes">Languages</div>
+                <div class="form-check form-check-inline mb-2 pr-3">
+                    <input class="form-check-input" name="Languages" value="js" type="checkbox" id="autoSizingCheck1">
+                    <label class="form-check-label" for="autoSizingCheck1">
+                        js
+                    </label>
+                </div>
+                <div class="form-check mb-2 pr-3">
+                    <input class="form-check-input" name="Languages" value="cs" type="checkbox" id="autoSizingCheck2">
+                    <label class="form-check-label" for="autoSizingCheck2">
+                    cs
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" name="Languages" value="py" type="checkbox" id="autoSizingCheck3">
+                    <label class="form-check-label" for="autoSizingCheck3">
+                        py
+                    </label>
                 </div>
             </div>
             <!-- Partie Liste - sans validation -->
@@ -87,7 +85,7 @@
                 </select>
             </div>
             <!-- Partie Bouton Submit -->
-            <button type="submit" class="btn btn-primary mt-3">S'inscrire</button>
+            <button type="submit" class="btn btn-primary mt-3 mb-3">S'inscrire</button>
             <div class="error" id="submit-error"></div>
           </form>
     </main>
