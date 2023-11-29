@@ -34,60 +34,61 @@
                 <div class="error" id="phone-error"></div>
             </div>
             <!-- Partie boutons radios - sans validation -->
-            <div class="form-group row">
-                <div id="radios">Job</div>
+            <fieldset class="form-group border rounded p-3 text-left row">
+                <legend class="w-auto px-2 h6">Job</legend>
                 <div class="col-auto">
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                        <label class="form-check-label" for="gridRadios1">
-                          Front-End
-                        </label>
+                        <label class="form-check-label" for="gridRadios1"> Front-End </label>
                     </div>
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked>
-                        <label class="form-check-label" for="gridRadios2">
-                            Back-End
-                        </label>
+                        <label class="form-check-label" for="gridRadios2"> Back-End </label>
                       </div>
                 </div>
-            </div>
+            </fieldset>
+
             <!-- Partie cases à cocher - sans validation -->
-            <div class="form-group row">
-                <div id="checkboxes">Languages</div>
-                <div class="col-auto"></div>
-                    <div class="form-check mb-2 pr-3">
-                        <input class="form-check-input" type="checkbox" id="autoSizingCheck1">
+        
+            <fieldset class="form-group border rounded p-3 text-left row">
+                <legend class="w-auto px-2 h6">Langages</legend>
+                <div class=" col-auto" id="checklang">
+                    <div class="form-check">
+                        <input class="form-check-input" name="languages" value="js" type="checkbox" id="autoSizingCheck1">
                         <label class="form-check-label" for="autoSizingCheck1">
-                            js
+                            Javascript
                         </label>
                     </div>
-                    <div class="form-check mb-2 pr-3">
-                        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                    <div class="form-check">
+                        <input class="form-check-input" name="languages" value="cs" type="checkbox" id="autoSizingCheck2">
                         <label class="form-check-label" for="autoSizingCheck2">
-                        cs
+                        c#
                         </label>
                     </div>
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" id="autoSizingCheck3">
+                    <div class="form-check">
+                        <input class="form-check-input" name="languages" value="py" type="checkbox" id="autoSizingCheck3">
                         <label class="form-check-label" for="autoSizingCheck3">
-                            py
+                            Python
                         </label>
                     </div>
-                </div>
-            </div>
+                    <small class="error" id="language-error"></small>
+                </div>   
+            </fieldset>
+
             <!-- Partie Liste - sans validation -->
-            <div class="form-group row">
-                <label for="exampleFormControlSelect1">Framework</label>
+            <fieldset class="form-group border rounded p-3 text-left row">
+                <legend class="w-auto px-2 h6">Framework</legend>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option>ReactJs</option>
-                  <option>ExpressJs</option>
-                  <option>Django</option>
-                  <option>Laravel</option>
-                  <option>.NET Core</option>
-                </select>
-            </div>
+                    <option>ReactJs</option>
+                    <option>ExpressJs</option>
+                    <option>Django</option>
+                    <option>Laravel</option>
+                    <option>.NET Core</option>
+                  </select>
+            </fieldset>
+            
             <!-- Partie Bouton Submit -->
-            <button type="submit" class="btn btn-primary mt-3">S'inscrire</button>
+            <button type="submit" class="btn btn-primary mt-3 mb-3">S'inscrire</button>
             <div class="error" id="submit-error"></div>
           </form>
     </main>
