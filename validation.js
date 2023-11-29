@@ -4,6 +4,7 @@ const lastname = document.getElementById('lastname');
 const firstname = document.getElementById('firstname');
 const email = document.getElementById('email');
 const phone = document.getElementById('phone');
+const language = document.getElementById('autoSizingCheck1');
 
 
 /*  Ajout d'un EventListener sur le formulaire pour empêcher
@@ -37,6 +38,22 @@ const setSuccess = (element, message) =>{
     myInput.style.borderColor= '#09c372';
 }
 
+const setCheckboxError = (element, message) =>{
+    const inputControl = element.parentElement.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    errorDisplay.style.fontSize = "small"; // Add small font-size when error validation
+    errorDisplay.style.color = "#ff3860";   // Add red color to the error text validation 
+}
+const setCheckboxSuccess = (element, message) =>{
+    const inputControl = element.parentElement.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    errorDisplay.style.fontSize = "small"; // Add small font-size when error validation
+    errorDisplay.style.color = "#09c372";   // Add red color to the error text validation 
+}
 // Implémentation de la fonction validateInputs
 const validateInputs = () => {
     const lastnameValue = lastname.value.trim();
@@ -77,4 +94,30 @@ const validateInputs = () => {
     }else{
         setSuccess(phone, 'C\'est parfait!');
     }
+    ValidateLanguageSelection()
 };
+
+// 
+function ValidateLanguageSelection()  
+{  
+    var checkboxes = document.getElementsByName("languages");  
+    console.log(checkboxes);
+    var numberOfCheckedItems = 0;  
+    for(var i = 0; i < checkboxes.length; i++)  
+    {  
+        if(checkboxes[i].checked)  
+            numberOfCheckedItems++;  
+    }
+    console.log(numberOfCheckedItems);
+    if(numberOfCheckedItems > 2){
+        setCheckboxError(language, "Veuillez ne selectionner que deux langages max svp!");
+        return false; 
+    }else if(numberOfCheckedItems === 0){
+        setCheckboxError(language, "Vous devez choisir un langage!"); 
+        return false; 
+    }else{
+        setCheckboxSuccess(language, "c'est parfait!"); 
+        return true;
+    }
+    
+} 
