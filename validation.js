@@ -5,10 +5,18 @@ const firstname = document.getElementById('firstname');
 const email = document.getElementById('email');
 const phone = document.getElementById('phone');
 const job = document.getElementsByName('gridRadios');
-const language = document.getElementsByName('lang');
+const lang = document.getElementsByName('languages');
 const framework = document.getElementById('exampleFormControlSelect1');
+const language = document.getElementById('autoSizingCheck1');
 
 const myModal = new bootstrap.Modal(document.getElementById('myModal'));
+const nom = document.getElementById('nomModal');
+const prenom = document.getElementById('prenomModal');
+const courriel = document.getElementById('courrielModal');
+const phoneM = document.getElementById('phoneModal');
+const jobM = document.getElementById('jobModal');
+const languageM = document.getElementById('langModal');
+const frameworkM = document.getElementById('frameModal');
 
 /*  Ajout d'un EventListener sur le formulaire pour empêcher
     la soumission du formulaire avant la validation des inputs. */
@@ -41,6 +49,22 @@ const setSuccess = (element, message) =>{
     myInput.style.borderColor= '#09c372';
 }
 
+const setCheckboxError = (element, message) =>{
+    const inputControl = element.parentElement.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    errorDisplay.style.fontSize = "small"; // Add small font-size when error validation
+    errorDisplay.style.color = "#ff3860";   // Add red color to the error text validation 
+}
+const setCheckboxSuccess = (element, message) =>{
+    const inputControl = element.parentElement.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    errorDisplay.style.fontSize = "small"; // Add small font-size when error validation
+    errorDisplay.style.color = "#09c372";   // Add red color to the error text validation 
+}
 // Implémentation de la fonction validateInputs
 const validateInputs = () => {
     const lastnameValue = lastname.value.trim();
@@ -91,35 +115,62 @@ const validateInputs = () => {
     }else{
         setSuccess(phone, 'C\'est parfait!');
     }
+    validate = ValidateLanguageSelection()
+    if(!validate) testValidation = true;
+
     console.log(">>>>>>>>>" + testValidation)
     if(!testValidation){
-        const nom = document.getElementById('nomModal');
         nom.innerHTML = lastnameValue
-        const prenom = document.getElementById('prenomModal');
         prenom.innerHTML = firstnameValue
-        const courriel = document.getElementById('courrielModal');
         courriel.innerHTML = emailValue
-        const phoneM = document.getElementById('phoneModal');
         phoneM.innerHTML = phoneValue
-        const jobM = document.getElementById('jobModal');
         for (i = 0; i < job.length; i++) {
             if (job[i].checked)
                 jobM.innerHTML
-                    += job[i].value + " - ";
+                    += job[i].value;
         }
-        const languageM = document.getElementById('langModal');
-        for (i = 0; i < language.length; i++) {
-            if (language[i].checked)
+        for (i = 0; i < lang.length; i++) {
+            if (lang[i].checked)
             languageM.innerHTML
-                    += language[i].value + " - ";
+                    += lang[i].value + "  ";
         }
-        const frameworkM = document.getElementById('frameModal');
         frameworkM.innerHTML = framework.value
         
         myModal.show();
     }
 };
 
+// 
+function ValidateLanguageSelection()  
+{  
+    var checkboxes = document.getElementsByName("languages");  
+    console.log(checkboxes);
+    var numberOfCheckedItems = 0;  
+    for(var i = 0; i < checkboxes.length; i++)  
+    {  
+        if(checkboxes[i].checked)  
+            numberOfCheckedItems++;  
+    }
+    console.log(numberOfCheckedItems);
+    if(numberOfCheckedItems > 2){
+        setCheckboxError(language, "Veuillez ne selectionner que deux langages max svp!");
+        return false; 
+    }else if(numberOfCheckedItems === 0){
+        setCheckboxError(language, "Vous devez choisir un langage!"); 
+        return false; 
+    }else{
+        setCheckboxSuccess(language, "c'est parfait!"); 
+        return true;
+    }
+};
+
 const closeModal = () => {
     myModal.hide()
+    nom.innerHTML = ""
+    prenom.innerHTML = ""
+    courriel.innerHTML = ""
+    phoneM.innerHTML = ""
+    jobM.innerHTML = ""
+    languageM.innerHTML = ""
+    frameworkM.innerHTML = ""
 }
