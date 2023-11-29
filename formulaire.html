@@ -52,38 +52,41 @@
         
             <fieldset class="form-group border rounded p-3 text-left row">
                 <legend class="w-auto px-2 h6">Langages</legend>
-                <div class="form-check form-check-inline mb-2 px-3">
-                    <input class="form-check-input" name="Languages" value="js" type="checkbox" id="autoSizingCheck1">
-                    <label class="form-check-label" for="autoSizingCheck1">
-                        js
-                    </label>
-                </div>
-                <div class="form-check mb-2 pr-3">
-                    <input class="form-check-input" name="Languages" value="cs" type="checkbox" id="autoSizingCheck2">
-                    <label class="form-check-label" for="autoSizingCheck2">
-                    cs
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" name="Languages" value="py" type="checkbox" id="autoSizingCheck3">
-                    <label class="form-check-label" for="autoSizingCheck3">
-                        py
-                    </label>
+                <div class="col-auto">
+                    <div class="form-check">
+                        <input class="form-check-input" name="Languages" value="js" type="checkbox" id="autoSizingCheck1">
+                        <label class="form-check-label" for="autoSizingCheck1">
+                            Javascript
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="Languages" value="cs" type="checkbox" id="autoSizingCheck2">
+                        <label class="form-check-label" for="autoSizingCheck2">
+                        c#
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="Languages" value="py" type="checkbox" id="autoSizingCheck3">
+                        <label class="form-check-label" for="autoSizingCheck3">
+                            Python
+                        </label>
+                    </div>
+                    <small class="error" id="phone-error"></small>
                 </div>   
             </fieldset>
-            
 
             <!-- Partie Liste - sans validation -->
-            <div class="form-group row">
-                <label for="exampleFormControlSelect1">Framework</label>
+            <fieldset class="form-group border rounded p-3 text-left row">
+                <legend class="w-auto px-2 h6">Framework</legend>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option>ReactJs</option>
-                  <option>ExpressJs</option>
-                  <option>Django</option>
-                  <option>Laravel</option>
-                  <option>.NET Core</option>
-                </select>
-            </div>
+                    <option>ReactJs</option>
+                    <option>ExpressJs</option>
+                    <option>Django</option>
+                    <option>Laravel</option>
+                    <option>.NET Core</option>
+                  </select>
+            </fieldset>
+            
             <!-- Partie Bouton Submit -->
             <button type="submit" class="btn btn-primary mt-3 mb-3">S'inscrire</button>
             <div class="error" id="submit-error"></div>
