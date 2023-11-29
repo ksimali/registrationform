@@ -34,27 +34,25 @@
                 <div class="error" id="phone-error"></div>
             </div>
             <!-- Partie boutons radios - sans validation -->
-            <div class="form-group row">
-                <div class="mr-3"id="radios">Job</div>
+            <fieldset class="form-group border rounded p-3 text-left row">
+                <legend class="w-auto px-2 h6">Job</legend>
                 <div class="col-auto">
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                        <label class="form-check-label" for="gridRadios1">
-                          Front-End
-                        </label>
+                        <label class="form-check-label" for="gridRadios1"> Front-End </label>
                     </div>
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" checked>
-                        <label class="form-check-label" for="gridRadios2">
-                            Back-End
-                        </label>
+                        <label class="form-check-label" for="gridRadios2"> Back-End </label>
                       </div>
                 </div>
-            </div>
+            </fieldset>
+
             <!-- Partie cases à cocher - sans validation -->
-            <div class="form-group row">
-                <div class="mr-4" id="checkboxes">Langages</div>
-                <div class="form-check form-check-inline mb-2 pr-3">
+        
+            <fieldset class="form-group border rounded p-3 text-left row">
+                <legend class="w-auto px-2 h6">Langages</legend>
+                <div class="form-check form-check-inline mb-2 px-3">
                     <input class="form-check-input" name="Languages" value="js" type="checkbox" id="autoSizingCheck1">
                     <label class="form-check-label" for="autoSizingCheck1">
                         js
@@ -71,9 +69,10 @@
                     <label class="form-check-label" for="autoSizingCheck3">
                         py
                     </label>
-                </div>
-            </div>
+                </div>   
+            </fieldset>
             
+
             <!-- Partie Liste - sans validation -->
             <div class="form-group row">
                 <label for="exampleFormControlSelect1">Framework</label>
